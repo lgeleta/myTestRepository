@@ -1,0 +1,11 @@
+node {
+    stage('create file') {
+    sh 'touch Newfile'    
+    }
+    stage('write') {
+        sh 'echo "this is the massge" > Newfile'
+    }
+    stage('print'){
+        sh 'cat Newfile'
+    }
+}
